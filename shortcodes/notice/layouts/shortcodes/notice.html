@@ -5,9 +5,9 @@
 {{ end }}
 
 
-<div class="notice {{ $type }}">
+<div class="notice {{ $type }} {{ $title }}">
   <div class="notice-head">
-    {{ if eq $type "tldr" }}
+    {{ if eq $type "tip" }}
       <svg
         width="20"
         height="20"
@@ -62,7 +62,7 @@
           stroke-linejoin="round"></path>
       </svg>
     {{ end }}
-    <p>{{ $type | title }}</p>
+    <p>{{ $title | title }}</p>
   </div>
   <div class="notice-body"><p>{{ .Inner | markdownify }}</p></div>
 </div>
