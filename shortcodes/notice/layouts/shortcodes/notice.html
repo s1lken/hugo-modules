@@ -5,7 +5,7 @@
 {{ end }}
 
 
-<div class="notice {{ $type }} {{ $title }}">
+<div class="notice {{ $type $title }}">
   <div class="notice-head">
     {{ if eq $type "tip" }}
       <svg
