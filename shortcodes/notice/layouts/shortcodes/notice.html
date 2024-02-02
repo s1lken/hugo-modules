@@ -1,7 +1,9 @@
-{{ $type:= .Get 0 }}
+{{ $type := .Get 0 }}
+{{ $title := .Get 1 }}
 
-{{ range $i, $e:= .Params }}
+{{ range $i, $e := .Params }}
   {{ if eq $i "type" }}{{ $type = $e }}{{ end }}
+  {{ if eq $i "title" }}{{ $title = $e }}{{ end }}
 {{ end }}
 
 
